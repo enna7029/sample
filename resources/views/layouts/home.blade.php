@@ -1,15 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>@yield('title')</title>
     <meta name="keywords" content="@yield('keywords')" />
     <meta name="description" content="@yield('description')" />
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="csrf-token" content="{{csrf_token()}}">
-    {{--<meta rel="stylesheet" href="{{mix('css/app.css')}}">--}}
-    @yield('css')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
 <!--页眉-->
@@ -37,6 +35,7 @@
 <div id="b-content" class="container">
     <div class="row">
         @yield('content')
+        <!-- 右侧开始 -->
         <div id="b-public-right" class="col-lg-4 hidden-xs hidden-sm hidden-md">
             <div class="b-search">
                 <form class="form-inline" role="form" action="{{ url('search') }}" method="get">
@@ -45,6 +44,7 @@
                 </form>
             </div>
         </div>
+        <!-- 右侧结束 -->
     </div>
 </div>
 <!--页脚-->
@@ -77,6 +77,6 @@
     </div>
 </div>
 
-{{--<script src="{{ mix('js/app.js') }}"></script>--}}
+<script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>

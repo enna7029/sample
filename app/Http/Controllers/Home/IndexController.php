@@ -27,6 +27,7 @@ class IndexController extends Controller
             'tagName' => '',
         ];
 
+
         return view('home.index.index', $assign);
 
     }

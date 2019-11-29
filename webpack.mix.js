@@ -11,5 +11,16 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+
+//home模块
+mix.js('resources/assets/js/app.js','public/js') //js
+    .sass('resources/assets/sass/app.scss','public/css') //css
+    .copyDirectory('resources/assets/images/','public/images') //images
+    .version();
+
+//admin模块
+mix.js('resources/assets/js/admin.js','public/js')
+     .sass('resources/assets/sass/admin.scss','public/css')
+     .version();
+
+

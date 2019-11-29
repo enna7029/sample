@@ -43,12 +43,12 @@ class Kernel extends HttpKernel
         ],
     ];
 
-    /**
+    /**AuthenticateSession
      * The application's route middleware.
      *
      * These middleware may be assigned to groups or used individually.
      *
-     * @var array
+     * @var arrayguest
      */
     protected $routeMiddleware = [
         'auth' => \App\Http\Middleware\Authenticate::class,
@@ -61,6 +61,10 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        //后台登录
+        'admin.login'=>\App\Http\Middleware\AdminLogin::class,
+        //后台验证
+        'admin.auth'=>\App\Http\Middleware\AdminAuth::class,
     ];
 
     /**
