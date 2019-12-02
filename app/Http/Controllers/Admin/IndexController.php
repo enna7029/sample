@@ -53,8 +53,4 @@ class IndexController extends Controller
         echo 'and sample';
     }
 
-    public function test()
-    {
-        echo '& sample';
-    }
 }
