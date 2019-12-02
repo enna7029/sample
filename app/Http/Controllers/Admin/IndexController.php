@@ -39,4 +39,9 @@ class IndexController extends Controller
         $newVersion=$version[0];
         $oldVersion=config('sample.version');
     }
+
+    public function test()
+    {
+        echo '& sample';
+    }
 }
