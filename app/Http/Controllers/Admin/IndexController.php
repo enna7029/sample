@@ -47,4 +47,9 @@ class IndexController extends Controller
             return redirect(url('admin/index/index'));
         }
     }
+
+    public function test()
+    {
+        echo 'and sample';
+    }
 }
