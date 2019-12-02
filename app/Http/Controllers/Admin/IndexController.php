@@ -50,7 +50,7 @@ class IndexController extends Controller
 
     public function test()
     {
-        echo 'and sample and';
+        echo 'and sample &&';
     }
 
 }
